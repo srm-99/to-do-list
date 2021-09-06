@@ -120,8 +120,10 @@ header {
 .list-section ul li {
     padding-bottom: 0.5rem;
 }
-.list-section ul li p {
+.list-section ul li div {
     padding: 0.3rem;
+    display: flex;
+    justify-content: space-between;
 
     /* Glassmorphism */
     backdrop-filter: blur(3px) saturate(180%);
@@ -136,4 +138,8 @@ header {
 }
 .list-section ul li p:hover {
     background-color: rgba(255, 255, 255, 0.274);
+}
+
+.li-strong {
+    font-size: small;
 }
