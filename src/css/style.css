@@ -1,0 +1,158 @@
+/* ------------------------ Variables CSS */
+:root {
+    --font-color: #494949;
+    --second-font-color: #a3a3a3;
+}
+
+/* -------------------------- Common */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        rgb(255, 255, 255) 0%,
+        rgb(167, 161, 254) 25%,
+        rgb(21, 0, 212) 50%,
+        rgb(98, 0, 143) 75%,
+        rgb(255, 255, 255) 100%
+    );
+}
+#root {
+    height: 100%;
+    /* Glassmorphism */
+    backdrop-filter: blur(300px) saturate(100%);
+}
+.container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    border: 5px solid rgba(106, 0, 167, 0.678);
+    /* Glassmorphism */
+    backdrop-filter: blur(3px) saturate(180%);
+    -webkit-backdrop-filter: blur(3px) saturate(180%);
+    /* Drop shadow */
+    -webkit-box-shadow: 0px 0px 22px -3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 22px -3px rgba(0, 0, 0, 0.2);
+}
+header {
+    padding: 1rem;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 7px rgba(15, 0, 102, 0.47);
+    text-align: center;
+    justify-content: center;
+}
+hr {
+    width: 30%;
+    margin: 1rem auto;
+    border: 1px solid rgba(218, 0, 182, 0.842);
+    border-radius: 50%;
+    /* Drop shadow */
+    -webkit-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.2);
+}
+
+/* -------------------------- Input section */
+
+.input-section {
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: var(--font-color);
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+}
+input {
+    flex: 1 0 auto;
+    height: 2.5rem;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 1rem 0 0 1rem;
+}
+input::placeholder {
+    color: var(--font-color);
+}
+input:hover {
+    background-color: rgb(243, 243, 243);
+}
+input:focus {
+    background-color: rgb(241, 241, 241);
+    outline-style: none;
+    box-shadow: none;
+}
+.add-button {
+    flex: 0 0 4rem;
+    height: 2.5rem;
+    background-color: rgb(0, 183, 255);
+    border: none;
+    border-right: 1px solid rgb(255, 255, 255);
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+}
+.add-button:hover {
+    background-color: rgb(0, 173, 241);
+}
+.delete-button {
+    flex: 0 0 4rem;
+    height: 2.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    background-color: rgb(0, 183, 255);
+    border: none;
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+}
+.delete-button:hover {
+    background-color: rgb(0, 173, 241);
+}
+/* -------------------------- List section */
+.to-do-list {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+.to-do-list li {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.2rem;
+    display: grid;
+    grid-template:
+        "p       button-delete " 1fr
+        "span     button-delete " 1fr/
+        1fr 2rem;
+    border-bottom: 1px solid rgb(153, 153, 153);
+}
+.to-do-list p {
+    grid-area: p;
+    cursor: default;
+}
+.to-do-list p:hover {
+    background-color: rgb(241, 241, 241);
+}
+.to-do-list span {
+    grid-area: span;
+    font-size: x-small;
+    color: var(--second-font-color);
+}
+.to-do-list button {
+    grid-area: button-delete;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: var(--font-color);
+}
+.to-do-list button:hover {
+    background-color: rgb(241, 241, 241);
+}
+/* -------------------------- */
